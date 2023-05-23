@@ -124,7 +124,7 @@ public:
 	void readBuffer(bool force = true);
 	uint8_t digitalRead(uint8_t pin);
 	uint16_t getBuffer(void);
-
+	uint16_t state ;
 	#ifndef PCF8575_LOW_MEMORY
 		struct DigitalInput {
 #ifdef NOT_SEQUENTIAL_PINOUT

@@ -194,8 +194,16 @@ void PCF8575::readBuffer(bool force){
 }
 
 uint16_t PCF8575::getBuffer(){
-		readBuffer(); 
+		DEBUG_PRINT("force read from buffer \n");
+		readBuffer(true); 
+
 		uint16_t byteRead = byteBuffered;
+
+		if ((readMode & byteBuffered)>0){
+			byteBuffered = ~readMode & byteBuffered;
+			DEBUG_PRINT("Buffer set to low to read buffer only one time. byteBuffered:%i \n",byteBuffered );
+		}
+		DEBUG_PRINT("Return value %i\n",byteRead);
 		return byteRead;
 }
 
