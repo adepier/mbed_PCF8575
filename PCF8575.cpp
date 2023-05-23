@@ -193,6 +193,12 @@ void PCF8575::readBuffer(bool force){
 	}
 }
 
+uint16_t PCF8575::getBuffer(){
+		readBuffer(); 
+		uint16_t byteRead = byteBuffered;
+		return byteRead;
+}
+
 /**
  * Write on pin
  * @param pin
