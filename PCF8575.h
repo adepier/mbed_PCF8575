@@ -47,7 +47,7 @@
 // #define NOT_SEQUENTIAL_PINOUT
  
 
-#define READ_ELAPSED_TIME 10
+#define READ_ELAPSED_TIME 100
 
 //#define P0  	B00000001
 //#define P1  	B00000010

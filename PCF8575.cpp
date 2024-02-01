@@ -195,7 +195,7 @@ void PCF8575::readBuffer(bool force){
 
 uint16_t PCF8575::getBuffer(){
 		DEBUG_PRINT("force read from buffer \n");
-		readBuffer(true); 
+		readBuffer(false); 
 
 		uint16_t byteRead = byteBuffered;
 
